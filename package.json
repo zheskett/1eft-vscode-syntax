@@ -1,0 +1,25 @@
+{
+  "name": "1eft-vscode-syntax",
+  "displayName": "1eft-vscode-syntax",
+  "description": "Syntax highlighting for 1eft in VSCode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "1eft",
+      "aliases": ["1eft", "1eft"],
+      "extensions": ["!1eft"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "1eft",
+      "scopeName": "source!1eft",
+      "path": "./syntaxes/1eft.tmLanguage.json"
+    }]
+  }
+}

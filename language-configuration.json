@@ -1,0 +1,45 @@
+{
+    "comments": {
+        // symbol used for single line comment. Remove this entry if your language does not support line comments
+        "lineComment": "#",
+    },
+    // symbols used as brackets
+    "brackets": [
+        [
+            "%s",
+            "!s"
+        ],
+        [
+            "%e",
+            "!e"
+        ]
+    ],
+    // symbols that are auto closed when typing
+    "autoClosingPairs": [
+        [
+            "%s",
+            "!s"
+        ],
+        [
+            "%e",
+            "!e"
+        ],
+    ],
+    // symbols that can be used to surround a selection
+    "surroundingPairs": [
+        [
+            "%s",
+            "!s"
+        ],
+        [
+            "%e",
+            "!e"
+        ],
+    ],
+    "folding": {
+        "markers": {
+            "start": "^\\s*%s\\b",
+            "end": "^\\s*%e\\b"
+        }
+    }
+}

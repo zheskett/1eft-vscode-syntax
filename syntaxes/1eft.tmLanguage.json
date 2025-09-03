@@ -1,0 +1,139 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "1eft",
+    "patterns": [
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#punctuation"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#functions"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#types"
+        },
+        {
+            "include": "#variables"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.1eft",
+                    "match": "\\b(ret)\\b"
+                },
+                {
+                    "name": "keyword.operator.1eft",
+                    "match": "\\b(a|s|d|t|ass)\\b"
+                }
+            ]
+        },
+        "functions": {
+            "patterns": [
+                {
+                    "match": "\\b(exec)\\s+([a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@]*)",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.control.exec.1eft"
+                        },
+                        "2": {
+                            "name": "entity.name.function.1eft"
+                        }
+                    }
+                },
+                {
+                    "name": "meta.function.def.1eft",
+                    "begin": "\\b(def)\\b\\s+\\b(dect|v\\@1d)\\b\\s+",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "keyword.other.1eft"
+                        },
+                        "2": {
+                            "name": "storage.type.1eft"
+                        }
+                    },
+                    "end": "(?=\\s*%s|$)",
+                    "patterns": [
+                        {
+                            "name": "entity.name.function.1eft",
+                            "match": "\\G[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@]*\\b"
+                        },
+                        {
+                            "include": "#whitespace"
+                        },
+                        {
+                            "patterns": [
+                                {
+                                    "include": "#types"
+                                },
+                                {
+                                    "include": "#whitespace"
+                                },
+                                {
+                                    "name": "variable.parameter.1eft",
+                                    "match": "\\b[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@]*\\b"
+                                },
+                                {
+                                    "include": "#whitespace"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.1eft",
+            "begin": "`",
+            "end": "`",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.1eft",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.1eft",
+                    "match": "\\%d[1-5a-d\\@]+\\!d"
+                }
+            ]
+        },
+        "types": {
+            "patterns": [
+                {
+                    "name": "storage.type.1eft",
+                    "match": "\\b(dect|v\\@1d)\\b"
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
+                {
+                    "name": "variable.other.1eft",
+                    "match": "(?<![%!])\\b[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@]*\\b(?!\\s*\\()"
+                }
+            ]
+        },
+        "punctuation": {
+            "patterns": [
+                {
+                    "name": "punctuation.1eft",
+                    "match": "(?<!\\w)(?:\\%[se]|\\![se]|\\$)(?!\\w)"
+                }
+            ]
+        }
+    },
+    "scopeName": "source!1eft"
+}
