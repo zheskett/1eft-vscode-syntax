@@ -29,18 +29,30 @@
             "patterns": [
                 {
                     "name": "keyword.control.1eft",
-                    "match": "\\b(ret)\\b"
+                    "match": "\\b(ret|bass)\\b"
                 },
                 {
                     "name": "keyword.operator.1eft",
                     "match": "\\b(a|s|d|t|ass)\\b"
+                },
+                {
+                    "name": "keyword.operator.new.1eft",
+                    "match": "(?<![a-gq-tv-xzA-GQ-TV-XZ1-5@])(?:rev|sf@|@@|@r)(?![a-gq-tv-xzA-GQ-TV-XZ1-5@])"
+                },
+                {
+                    "name": "keyword.operator.1eft",
+                    "match": "\\b(eq|req|1t|gt|1te|gte)\\b"
+                },
+                {
+                    "name": "constant.language",
+                    "match": "\\b(trve|fa1se)\\b"
                 }
             ]
         },
         "functions": {
             "patterns": [
                 {
-                    "match": "\\b(exec)\\s+([a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@]*)",
+                    "match": "\\b(exec)\\s+([a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@~]*)",
                     "captures": {
                         "1": {
                             "name": "keyword.control.exec.1eft"
@@ -65,7 +77,7 @@
                     "patterns": [
                         {
                             "name": "entity.name.function.1eft",
-                            "match": "\\G[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@]*\\b"
+                            "match": "\\G[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@~]*\\b"
                         },
                         {
                             "include": "#whitespace"
@@ -80,7 +92,7 @@
                                 },
                                 {
                                     "name": "variable.parameter.1eft",
-                                    "match": "\\b[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@]*\\b"
+                                    "match": "\\b[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@~]*\\b"
                                 },
                                 {
                                     "include": "#whitespace"
@@ -114,7 +126,7 @@
             "patterns": [
                 {
                     "name": "storage.type.1eft",
-                    "match": "\\b(dect|v\\@1d)\\b"
+                    "match": "\\b(dect|v\\@1d|str|b\\@\\@1)\\b"
                 }
             ]
         },
@@ -122,7 +134,7 @@
             "patterns": [
                 {
                     "name": "variable.other.1eft",
-                    "match": "(?<![%!])\\b[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@]*\\b(?!\\s*\\()"
+                    "match": "(?<![%!])\\b[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5~]*\\b(?!\\s*\\()"
                 }
             ]
         },
@@ -130,7 +142,7 @@
             "patterns": [
                 {
                     "name": "punctuation.1eft",
-                    "match": "(?<!\\w)(?:\\%[se]|\\![se]|\\$)(?!\\w)"
+                    "match": "(?<!\\w)(?:\\%[se]|\\![se]|\\$~)(?!\\w)"
                 }
             ]
         }
