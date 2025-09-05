@@ -29,7 +29,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.1eft",
-                    "match": "\\b(ret|bass)\\b"
+                    "match": "\\b(ret|bass|1f|e1se|e1se1f)\\b"
                 },
                 {
                     "name": "keyword.operator.1eft",
