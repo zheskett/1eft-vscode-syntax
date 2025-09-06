@@ -52,7 +52,7 @@
         "functions": {
             "patterns": [
                 {
-                    "match": "\\b(exec)\\s+([a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@~]*)",
+                    "match": "\\b(exec)\\s+([a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@]*)",
                     "captures": {
                         "1": {
                             "name": "keyword.control.exec.1eft"
@@ -77,7 +77,7 @@
                     "patterns": [
                         {
                             "name": "entity.name.function.1eft",
-                            "match": "\\G[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@~]*\\b"
+                            "match": "\\G[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@]*\\b"
                         },
                         {
                             "include": "#whitespace"
@@ -92,7 +92,7 @@
                                 },
                                 {
                                     "name": "variable.parameter.1eft",
-                                    "match": "\\b[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@~]*\\b"
+                                    "match": "\\b[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@]*\\b"
                                 },
                                 {
                                     "include": "#whitespace"
@@ -134,7 +134,7 @@
             "patterns": [
                 {
                     "name": "variable.other.1eft",
-                    "match": "(?<![%!])\\b[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5~]*\\b(?!\\s*\\()"
+                    "match": "(?<![%!])\\b[a-gq-tv-xzA-GQ-TV-XZ][a-gq-tv-xzA-GQ-TV-XZ1-5@]*\\b(?!\\s*)"
                 }
             ]
         },
