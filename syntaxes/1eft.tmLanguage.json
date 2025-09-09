@@ -37,11 +37,15 @@
                 },
                 {
                     "name": "keyword.other.1eft",
-                    "match": "(?<![a-gq-tv-xzA-GQ-TV-XZ1-5@])(?:rev|sf@|@@|@r)(?![a-gq-tv-xzA-GQ-TV-XZ1-5\\@])"
+                    "match": "(?<![a-gq-tv-xzA-GQ-TV-XZ1-5@])(?:rev|sf@|@@|@r|addr)(?![a-gq-tv-xzA-GQ-TV-XZ1-5\\@])"
                 },
                 {
                     "name": "keyword.operator.1eft",
                     "match": "\\b(eq|req|1t|gt|1te|gte)\\b"
+                },
+                {
+                    "name": "keyword.operator.1eft",
+                    "match": "\\#"
                 },
                 {
                     "name": "constant.language",
@@ -126,7 +130,7 @@
             "patterns": [
                 {
                     "name": "storage.type.1eft",
-                    "match": "\\b(dect|v\\@1d|str|b\\@\\@1)\\b"
+                    "match": "\\b(dect|v\\@1d|str|b\\@\\@1|car)\\b"
                 }
             ]
         },
